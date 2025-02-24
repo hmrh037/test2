@@ -196,7 +196,7 @@
             <li>🏥 Oportunidades no setor público e privado</li>
         </ul>
         <p class="cta">🚀 Comece sua nova carreira hoje mesmo! Clique no botão abaixo:</p>
-        <a href="https://api.whatsapp.com/send?phone=5511999999999&text=Quero%20garantir%20minha%20vaga%20AGORA!" 
+        <a href="https://api.whatsapp.com/send?phone=5546999044965&text=Quero%20garantir%20minha%20vaga%20AGORA!" 
            class="btn-whatsapp"
            aria-label="Fale com um especialista no WhatsApp">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
@@ -213,11 +213,9 @@
     <script>
         function sharePage() {
             const pageUrl = window.location.href;
-            // Mensagem sem o link para evitar duplicidade, pois o link será passado separadamente.
             const shareText = "Olhe essa oportunidade!";
 
             if (navigator.share) {
-                // Compartilhamento nativo com título, texto e URL
                 navigator.share({
                     title: "Olhe essa oportunidade",
                     text: shareText,
@@ -225,7 +223,6 @@
                 }).then(() => console.log('Compartilhado com sucesso!'))
                   .catch((error) => console.log('Erro ao compartilhar:', error));
             } else {
-                // Fallback: compartilhamento via WhatsApp com a mensagem completa (texto + URL)
                 const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText + " " + pageUrl)}`;
                 const shareOption = `<a href="${whatsappUrl}" target="_blank">📲 Compartilhar via WhatsApp</a>`;
                 document.querySelector('.share-container').innerHTML += `<div class="share-links">${shareOption}</div>`;
